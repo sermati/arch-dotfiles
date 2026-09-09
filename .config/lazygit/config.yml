@@ -1,0 +1,7 @@
+customCommands:
+  - key: '<c-a>'
+    context: 'files'
+    description: 'AI: generar mensaje de commit (con dai) y commitear'
+    command: '~/.config/lazygit/scripts/ai-commit.sh'
+    loadingText: 'Generando mensaje con IA...'
+    output: terminal

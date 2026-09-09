@@ -1,0 +1,26 @@
+// Layout de dev.
+// Arriba (70% alto): lazygit 60% izq / claude 40% der.
+// Abajo (30% alto, ancho completo): dev server izq / terminal para comandos dai der.
+// Usalo desde la carpeta del proyecto: cd mi-proyecto && zellij --layout dev
+layout {
+    pane size=1 borderless=true {
+        plugin location="tab-bar"
+    }
+    pane split_direction="horizontal" {
+        pane size="70%" split_direction="vertical" {
+            pane size="60%" command="lazygit"
+            pane size="40%" command="claude"
+        }
+        pane size="30%" split_direction="vertical" {
+            pane command="bash" {
+                args "-c" "~/.config/zellij/scripts/start-dev-server.sh"
+            }
+            pane command="bash" {
+                args "-c" "echo 'Terminal dai (dai check, dai pr, dai stamp, etc)'; exec bash"
+            }
+        }
+    }
+    pane size=2 borderless=true {
+        plugin location="status-bar"
+    }
+}

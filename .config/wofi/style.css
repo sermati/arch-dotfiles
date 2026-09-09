@@ -1,0 +1,71 @@
+/* Catppuccin Mocha — matches Hyprland / Waybar / Kitty / hyprlock */
+
+window {
+    margin: 0;
+    padding: 0;
+    border: 2px solid #89b4fa;
+    border-radius: 12px;
+    background-color: rgba(30, 30, 46, 0.94);
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+}
+
+#input {
+    margin: 12px 12px 8px 12px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    color: #cdd6f4;
+    background-color: #313244;
+    outline: none;
+}
+
+#input:focus {
+    border: 1px solid #cba6f7;
+    box-shadow: none;
+}
+
+#inner-box {
+    margin: 0 8px 8px 8px;
+    padding: 4px;
+    border: none;
+    background-color: transparent;
+}
+
+#outer-box {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 0;
+    border: none;
+}
+
+#text {
+    margin: 0 8px;
+    color: #cdd6f4;
+}
+
+#entry {
+    padding: 8px 10px;
+    margin: 2px 0;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+#entry:selected {
+    background: linear-gradient(45deg, #89b4fa, #cba6f7);
+    outline: none;
+}
+
+#entry:selected #text {
+    color: #11111b;
+    font-weight: bold;
+}
+
+#img {
+    margin-right: 10px;
+}

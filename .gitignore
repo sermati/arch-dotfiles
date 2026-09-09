@@ -1,0 +1,33 @@
+# Este .gitignore aplica al repo bare de dotfiles (--work-tree=$HOME).
+# Es una red de seguridad para cuando alguna vez se use "git add -A" por error:
+# la lista real de que se versiona la decide "dotfiles add <path>" explicito.
+
+# Credenciales / tokens activos
+.config/cursor/
+*.token
+*_token
+id_rsa*
+id_ed25519*
+*.pem
+.env
+.env.*
+!.env.*.example
+
+# Perfiles de navegador (cookies, passwords, historial)
+.mozilla/
+.config/mozilla/
+.var/app/*/config/*/
+.var/app/*/data/*/
+
+# Estado/cache binario especifico de esta maquina
+.cache/
+.local/share/
+.config/dconf/
+.config/pulse/
+.config/Thunar/
+.config/gtk-3.0/
+.config/gtk-4.0/
+.config/xfce4/
+
+# Bare repo en si (no versionarse a si mismo)
+.dotfiles/
