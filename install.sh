@@ -7,7 +7,7 @@
 # Es idempotente: si $HOME/.dotfiles ya existe, hace pull en vez de clonar.
 set -euo pipefail
 
-REPO_URL="__DOTFILES_REPO_URL__"
+REPO_URL="git@github.com:sermati/arch-dotfiles.git"
 DOTFILES_DIR="$HOME/.dotfiles"
 BACKUP_DIR="$HOME/.dotfiles-backup-$(date +%Y%m%d-%H%M%S)"
 

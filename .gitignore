@@ -4,6 +4,9 @@
 
 # Credenciales / tokens activos
 .config/cursor/
+
+# Expone email personal y la URL del Vaultwarden self-hosteado
+.config/rbw/
 *.token
 *_token
 id_rsa*
