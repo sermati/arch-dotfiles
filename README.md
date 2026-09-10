@@ -50,6 +50,27 @@ dotfiles commit -m "..."
 dotfiles   # equivale a: dotfiles push origin master
 ```
 
+`dotfiles help` muestra este mismo resumen sin salir de la terminal. Otros comandos útiles del día a día:
+
+| Comando | Para qué |
+|---|---|
+| `dotfiles diff` | Ver el diff de lo que cambió (sin stagear) |
+| `dotfiles diff --staged` | Ver el diff de lo ya stageado, antes de commitear |
+| `dotfiles log --oneline` | Historial de commits |
+| `dotfiles rm --cached <archivo>` | Dejar de trackear un archivo **sin borrarlo del disco** (así saqué `rbw/config.json`) |
+| `dotfiles commit --amend --no-edit` | Corregir el último commit sin crear uno nuevo (después necesita `push --force`) |
+| `dotfiles checkout -- <archivo>` | Descartar cambios locales de un archivo trackeado, volver a como está en el repo |
+
+**Agregar un config nuevo por primera vez:**
+```sh
+dotfiles add ~/.config/algo/config.toml
+dotfiles status                              # confirmar que agarró lo que querías
+dotfiles commit -m "feat: agrega config de algo"
+dotfiles
+```
+
+Antes de un `dotfiles add` en una carpeta nueva, dale un vistazo a lo que tiene — este repo es público y cualquier token/credencial que se cuele ahí queda expuesto (ver [Seguridad](#seguridad--qué-se-dejó-afuera-a-propósito)).
+
 ## Prerrequisitos
 
 Paquetes de los repos oficiales (`pacman -S`):
