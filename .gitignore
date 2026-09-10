@@ -24,7 +24,10 @@ id_ed25519*
 
 # Estado/cache binario especifico de esta maquina
 .cache/
-.local/share/
+.local/share/*
+!.local/share/applications/
+.local/share/applications/*
+!.local/share/applications/*.desktop
 .config/dconf/
 .config/pulse/
 .config/Thunar/

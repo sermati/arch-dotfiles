@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Tapa / Energía (lid)
+Comment=Cambiar que hace la notebook al cerrar la tapa
+Exec=/home/inter/.config/hypr/scripts/lid-switch-menu.sh
+Icon=battery
+Terminal=false
+Categories=Settings;
+Keywords=lid;tapa;energia;power;suspend;suspender;bloquear;
+NoDisplay=false
