@@ -10,6 +10,10 @@ alias grep='grep --color=auto'
 
 export PATH="$HOME/.local/bin:$PATH"
 
+# ssh-agent de la sesion (arranca en el autostart de Hyprland, socket fijo).
+# Solo para hoy: hasta el proximo login, hyprland.lua no reaplica el env.
+export SSH_AUTH_SOCK="/run/user/1000/ssh-agent.sock"
+
 # Starship prompt (Catppuccin Mocha)
 eval "$(starship init bash)"
 

@@ -38,6 +38,12 @@ hl.on("hyprland.start", function()
         .. " && systemctl --user start auto-brightness.timer"
     )
 
+    -- Un solo ssh-agent para toda la sesion, en un socket fijo (SSH_AUTH_SOCK
+    -- mas abajo) para que git/ssh en cualquier terminal lo encuentren. -D lo
+    -- mantiene en foreground bajo hyprctl (si no, se demoniza solo y hyprland
+    -- lo pierde de vista, pero sigue vivo igual).
+    hl.exec_cmd("ssh-agent -D -a /run/user/1000/ssh-agent.sock")
+
     hl.exec_cmd("waybar")
     hl.exec_cmd("mako")
     hl.exec_cmd("hyprpaper")
@@ -72,6 +78,10 @@ hl.env("XDG_SESSION_TYPE", "wayland")
 -- tiraba "Command not found: claude" porque zellij heredaba el PATH base
 -- de la sesion (sin ~/.local/bin), no el de una terminal normal.
 hl.env("PATH", "/home/inter/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/home/inter/.local/share/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl")
+
+-- ssh-agent de la sesion (ver exec-once mas arriba): asi ssh/git piden la
+-- passphrase una sola vez por sesion en vez de en cada pull/push.
+hl.env("SSH_AUTH_SOCK", "/run/user/1000/ssh-agent.sock")
 
 
 -----------------------
