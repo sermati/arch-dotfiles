@@ -66,6 +66,13 @@ hl.env("GDK_BACKEND", "wayland,x11")
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_TYPE", "wayland")
 
+-- Sin esto, cualquier cosa lanzada por wofi/Hyprland directo (sin pasar por
+-- una bash interactiva que lea .bashrc) no ve ~/.local/bin -- ej: el panel
+-- de "claude" en el layout de zellij lanzado desde el picker de proyectos
+-- tiraba "Command not found: claude" porque zellij heredaba el PATH base
+-- de la sesion (sin ~/.local/bin), no el de una terminal normal.
+hl.env("PATH", "/home/inter/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/home/inter/.local/share/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl")
+
 
 -----------------------
 ---- LOOK AND FEEL ----
