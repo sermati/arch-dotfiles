@@ -41,15 +41,13 @@ Es idempotente: correrlo de nuevo en una máquina que ya tiene `~/.dotfiles` sim
 
 ### Cómo funciona el versionado (sin herramientas extra)
 
-Este repo **no** vive en una carpeta separada — es un [bare repo](https://www.atlassian.com/git/tutorials/dotfiles) que usa `$HOME` directamente como working tree. Los archivos están en su ubicación real, no hay symlinks que gestionar. Para trabajar con él día a día (después de correr `install.sh` una vez), usá el alias que ya viene en `.bashrc`:
+Este repo **no** vive en una carpeta separada — es un [bare repo](https://www.atlassian.com/git/tutorials/dotfiles) que usa `$HOME` directamente como working tree. Los archivos están en su ubicación real, no hay symlinks que gestionar. Para trabajar con él día a día (después de correr `install.sh` una vez), usá la función `dotfiles` que ya viene en `.bashrc` (con argumentos se comporta como git normal; sin argumentos hace push):
 
 ```sh
-alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-
 dotfiles status
 dotfiles add ~/.config/algo
 dotfiles commit -m "..."
-dotfiles push
+dotfiles   # equivale a: dotfiles push origin master
 ```
 
 ## Prerrequisitos
