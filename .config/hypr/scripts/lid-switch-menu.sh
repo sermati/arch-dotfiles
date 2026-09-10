@@ -30,7 +30,7 @@ esac
 if pkexec bash -c "
     sed -i 's/^#\?HandleLidSwitch=.*/HandleLidSwitch=$value/' /etc/systemd/logind.conf
     grep -q '^HandleLidSwitch=' /etc/systemd/logind.conf || echo 'HandleLidSwitch=$value' >> /etc/systemd/logind.conf
-    systemctl restart systemd-logind
+    systemctl reload systemd-logind
 "; then
     notify-send "Tapa" "Comportamiento al cerrar: ${labels[$value]}"
 else
