@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Energía (apagar / reiniciar / suspender)
+Comment=Menu de energia: suspender, bloquear, cerrar sesion, reiniciar, apagar
+Exec=/home/inter/.config/hypr/scripts/power-menu.sh
+Icon=system-shutdown
+Terminal=false
+Categories=System;
+Keywords=power;energia;apagar;reiniciar;suspender;shutdown;reboot;logout;
+NoDisplay=false

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Proyecto (zellij dev)
+Comment=Elegir un proyecto y abrir el layout de zellij para trabajar con IA
+Exec=/home/inter/.config/hypr/scripts/project-picker.sh
+Icon=folder-development
+Terminal=false
+Categories=Development;
+Keywords=proyecto;project;zellij;dev;dai;claude;
+NoDisplay=false

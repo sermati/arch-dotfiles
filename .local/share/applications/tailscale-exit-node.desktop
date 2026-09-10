@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Tailscale: exit node
+Comment=Elegir por que nodo de tu tailnet salir a internet
+Exec=/home/inter/.config/hypr/scripts/tailscale-exit-node.sh
+Icon=network-vpn
+Terminal=false
+Categories=Network;
+Keywords=tailscale;vpn;exit;node;tailnet;
+NoDisplay=false
