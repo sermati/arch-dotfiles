@@ -62,7 +62,7 @@ waybar kitty wofi mako zellij lazygit starship
 rbw rofi-rbw
 networkmanager network-manager-applet bluez blueman
 tailscale ufw pacman-contrib
-cliphist wl-clipboard grim slurp
+cliphist wl-clipboard grim slurp swappy
 pipewire pipewire-pulse wireplumber pavucontrol
 playerctl brightnessctl
 thunar xfconf gsettings-desktop-schemas
