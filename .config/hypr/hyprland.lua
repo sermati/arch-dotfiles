@@ -173,13 +173,9 @@ hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
--- Screenshots
-hl.bind("Print", hl.dsp.exec_cmd(
-    'grim -g "$(slurp)" - | tee "$HOME/Pictures/Screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png" | wl-copy'
-))
-hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd(
-    'grim - | tee "$HOME/Pictures/Screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png" | wl-copy'
-))
+-- Screenshots (grim captura -> swappy para anotar/recortar/blur, Ctrl+S guarda, Ctrl+C copia)
+hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
+hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd('grim - | swappy -f -'))
 
 -- Clipboard history
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("cliphist list | wofi --dmenu | cliphist decode | wl-copy"))
