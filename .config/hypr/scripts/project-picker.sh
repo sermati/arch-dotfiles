@@ -24,4 +24,4 @@ chosen=$(printf '%s' "$choices" | wofi --dmenu --prompt "Proyecto (zellij dev)")
 target="${path_by_label[$chosen]:-}"
 [ -z "$target" ] && exit 0
 
-kitty -d "$target" bash -lc "zellij --layout dev"
+kitty -d "$target" bash -ic "zellij --layout dev"
