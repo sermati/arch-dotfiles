@@ -12,6 +12,15 @@ hl.monitor({
     scale    = 1,
 })
 
+-- Comodin para cualquier otro monitor (ej: uno externo conectado
+-- ocasionalmente): resolucion preferida, se ubica solo, escala auto.
+hl.monitor({
+    output   = "",
+    mode     = "preferred",
+    position = "auto",
+    scale    = "auto",
+})
+
 
 ---------------------
 ---- MY PROGRAMS ----
