@@ -1,5 +1,6 @@
 #!/bin/bash
-# Menu de wofi: lista los repos git bajo ~/projects y abre kitty + zellij --layout dev ahi.
+# Menu de wofi: lista los repos git bajo ~/projects y abre kitty + zellij ahi,
+# reutilizando la sesion existente de ese proyecto si ya hay una (attach --create).
 
 BASE="$HOME/projects"
 
@@ -24,4 +25,6 @@ chosen=$(printf '%s' "$choices" | wofi --dmenu --prompt "Proyecto (zellij dev)")
 target="${path_by_label[$chosen]:-}"
 [ -z "$target" ] && exit 0
 
-kitty -d "$target" bash -ic "zellij --layout dev"
+session_name=$(printf '%s' "$chosen" | tr -c 'a-zA-Z0-9_-' '_')
+
+kitty -d "$target" bash -ic "zellij attach '$session_name' --create"

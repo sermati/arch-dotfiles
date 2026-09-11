@@ -345,7 +345,7 @@ web_client {
 // The name of the default layout to load on startup
 // Default: "default"
 // 
-// default_layout "compact"
+default_layout "dev"
  
 // The folder in which Zellij will look for layouts
 // (Requires restart)
@@ -446,7 +446,7 @@ web_client {
 // When `session_name` is provided, attaches to that session
 // if it is already running or creates it otherwise.
 // Default: false
-// 
+//
 // attach_to_session true
  
 // Toggle between having Zellij lay out panes according to a predefined set of layouts whenever possible
