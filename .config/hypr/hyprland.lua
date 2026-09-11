@@ -12,8 +12,18 @@ hl.monitor({
     scale    = 1,
 })
 
--- Comodin para cualquier otro monitor (ej: uno externo conectado
--- ocasionalmente): resolucion preferida, se ubica solo, escala auto.
+-- Monitor externo (LG Ultrafine 4K), fisicamente arriba de la notebook
+-- y centrado con ella: 3840 de ancho vs 1920 de eDP-1, entonces
+-- X = -960 (le sobra 1920 de cada lado) e Y = -2160 (su alto completo,
+-- para que su borde inferior quede pegado al borde superior de eDP-1).
+hl.monitor({
+    output   = "HDMI-A-1",
+    mode     = "preferred",
+    position = "-960x-2160",
+    scale    = "auto",
+})
+
+-- Comodin para cualquier otro monitor no configurado explicitamente.
 hl.monitor({
     output   = "",
     mode     = "preferred",
