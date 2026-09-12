@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Cursor
+Comment=Editor de codigo basado en VS Code, con IA integrada
+Exec=/home/inter/.local/bin/cursor %F
+Icon=cursor
+Terminal=false
+Categories=Development;IDE;
+MimeType=text/plain;inode/directory;
+StartupWMClass=Cursor
